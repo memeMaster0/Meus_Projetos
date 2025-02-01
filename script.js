@@ -36,3 +36,30 @@ function showSlides(n) {
 setInterval(function() {
     moveSlide(1);
 }, 5000);
+
+// Detectar elementos com a classe "scroll-animate"
+const scrollElements = document.querySelectorAll(".scroll-animate");
+
+// Função para verificar se o elemento está na viewport
+const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= window.innerHeight && // O topo do elemento está dentro da altura da viewport
+        rect.bottom >= 0 // O fundo do elemento está acima do final da viewport
+    );
+};
+
+// Função para animar os elementos na viewport
+const scrollHandler = () => {
+    scrollElements.forEach((el) => {
+        if (isElementInViewport(el)) {
+            el.classList.add("animate");
+        }
+    });
+};
+
+// Escutar o evento de scroll
+window.addEventListener("scroll", scrollHandler);
+
+// Garantir que funcione também no carregamento inicial
+window.addEventListener("load", scrollHandler);

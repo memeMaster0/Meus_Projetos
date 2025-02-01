@@ -160,6 +160,7 @@ nav a:hover {
     width: 40px;
     margin-right: 10px;
 }
+
 .carousel-container {
     opacity: 0;
     transform: translateY(100px);
@@ -169,6 +170,7 @@ nav a:hover {
     margin: auto;
     margin-left: 100px;
 }
+
 .carousel-container.animate {
     opacity: 1;
     transform: translateY(0);
@@ -235,6 +237,170 @@ nav a:hover {
     background: white;
 }
 
+.specialties {
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    max-width: 70%;
+    clip-path: polygon(0 0, 100% 0, 92% 95%, 0% 100%);
+    position: relative;
+}
+
+.specialties h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+.specialties h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #ffc107;
+    margin: 10px auto 20px auto;
+}
+
+.specialties-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.specialty {
+    max-width: 300px;
+    text-align: left;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialty:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.specialty img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.specialty h3 {
+    font-size: 20px;
+    margin: 15px;
+    color: #333;
+}
+
+.specialty p {
+    font-size: 14px;
+    margin: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+    margin-bottom: 16px;
+}
+
+.footer-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-col ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: #24262b;
+    padding: 50px 0 30px 0;
+}
+
+.footer-col{
+   width: 25%;
+   padding: 0 10px;
+}
+
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #ffd000;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer-copy {
+    background-color: #1d1d1d;
+    padding: 10px 0;
+    text-align: center;
+    color: #bbbbbb;
+    font-size: 14px;
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.footer-copy p {
+    margin: 0px;
+}
 /* Animação para entrada da esquerda */
 @keyframes slideInLeft {
     from {
@@ -271,19 +437,41 @@ nav a:hover {
     }
 }
 
+/* Animação de fade-in para scroll */
+@keyframes fadeInOnScroll {
+    from {
+        transform: translateY(100px); /* Começa deslocado */
+        opacity: 0; /* Invisível */
+    }
+    to {
+        transform: translateY(0); /* Volta à posição original */
+        opacity: 1; /* Visível */
+    }
+}
+
+/* Classe para elementos que serão animados no scroll */
+.scroll-animate {
+    opacity: 0; /* Invisível até ser animado */
+    transform: translateY(30px); /* Posição inicial */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Classe adicionada dinamicamente para disparar a animação */
+.scroll-animate.animate {
+    animation: fadeInOnScroll 0.7s ease-out forwards;
+}
+
+
 /* Classe geral para animações */
 .animate {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    opacity: 0; /* Garante que não aparece antes da animação */
+    opacity: 0;
 }
 
 /* Ajustes para telas menores que 768px (celulares) */
 @media (max-width: 768px) {
-    /*body {
-        background-attachment: scroll; /* Melhora o desempenho em dispositivos móveis */
-    
 
     header {
         flex-direction: column;
@@ -292,7 +480,7 @@ nav a:hover {
     }
 
     .logo img {
-        max-height: 100px; /* Reduz o tamanho do logo */
+        max-height: 100px;
     }
 
     .contato {
@@ -302,69 +490,67 @@ nav a:hover {
     }
 
     .contato img {
-        height: 80px; /* Ajusta o tamanho do ícone */
+        height: 80px;
     }
 
     .contato-info span, .contato-info small {
-        text-align: center; /* Centraliza o texto de contato */
-        font-size: 16px; /* Reduz o tamanho da fonte */
+        text-align: center;
+        font-size: 16px;
     }
 
     nav {
         display: flex;
         flex-direction: row;
-        gap: 10px; /* Adiciona espaçamento entre os links */
+        gap: 10px;
         text-align: center;
         margin-top: 15px;
     }
 
     nav a {
-        padding: 10px 0; /* Remove excesso de espaço horizontal */
-        font-size: 16px; /* Ajusta o tamanho da fonte */
+        padding: 10px 0;
+        font-size: 16px;
     }
 
     .intro-section {
         flex-direction: column;
-        padding: 20px; /* Ajusta o padding para telas menores */
+        padding: 20px;
     }
-
     .intro-text {
         max-width: 100%;
         text-align: center;
-        margin-bottom: 20px; /* Adiciona espaço entre o texto e o carrossel */
+        margin-bottom: 20px;
     }
-
     .intro-text h1 {
-        font-size: 28px; /* Reduz o tamanho do título */
+        font-size: 28px;
     }
 
     .intro-text p {
-        font-size: 16px; /* Reduz o tamanho do parágrafo */
+        font-size: 16px;
     }
 
     .cta-button {
         font-size: 16px;
-        padding: 10px 20px; /* Ajusta o tamanho do botão */
+        padding: 10px 20px;
     }
 
     .benefits-list li {
-        font-size: 14px; /* Reduz o tamanho do texto dos benefícios */
-        padding: 5px 0; /* Ajusta o espaçamento */
+        font-size: 14px;
+        padding: 5px 0;
     }
 
     .carousel-container {
-        margin-left: 0; /* Centraliza o carrossel */
-        max-width: 100%; /* Ajusta para caber na tela menor */
+        margin-left: 0;
+        max-width: 100%;
     }
 
     .slide img {
-        width: 100%; /* Faz as imagens se ajustarem ao tamanho da tela */
-        height: auto; /* Mantém a proporção */
+        width: 100%;
+        height: auto;
     }
 
     .prev, .next {
-        font-size: 20px; /* Reduz o tamanho das setas */
-        padding: 5px; /* Ajusta o tamanho dos botões */
+        font-size: 20px;
+        padding: 5px;
     }
 
     .dots {
@@ -373,6 +559,6 @@ nav a:hover {
 
     .dot {
         width: 8px;
-        height: 8px; /* Reduz o tamanho dos indicadores */
+        height: 8px;
     }
 }

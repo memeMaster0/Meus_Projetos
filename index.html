@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Coberturas | TETTO PROJETOS | Goiás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="animate" style="animation-name: slideInRight;">
+        <div class="logo">
+            <img src="logo/logo.png" alt="Tetto Projetos Metálicos">
+        </div>
+        <div class="contato">
+            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento">
+                <img src="icons/whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <div class="contato-info">
+                <span>(62) 9 9443-7852</span>
+                <small>ORÇAMENTOS</small>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#introducao">Introdução</a>
+            <a href="#quem-somos">Quem somos?</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <section class="intro-section">
+        <div class="intro-text animate" style="animation-name: slideInLeft;">
+            <h1>Trabalhamos com Coberturas Metálicas</h1>
+            <p>Pergolados de ferro, estruturas de policarbonato e muito mais!</p>
+            <p>Precisa de um orçamento? Entre em contato clicando no botão abaixo:</p>
+            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" class="cta-button">
+                <img src="icons/whatsapp-icon.png" alt="WhatsApp"> Solicitar Orçamento
+            </a>
+            <ul class="benefits-list">
+                <li><img src="icons/check-icon.png" alt="Check"> Materiais de alta qualidade</li>
+                <li><img src="icons/check-icon.png" alt="Check"> Projetos personalizados</li>
+                <li><img src="icons/check-icon.png" alt="Check"> Instalação rápida</li>
+            </ul>            
+        </div>
+        <div class="carousel-container" id="carousel">
+            <div class="carousel">
+                <div class="slide fade">
+                    <img src="imagens/cobertura1.png" alt="Cobertura 1">
+                </div>
+                <div class="slide fade">
+                    <img src="imagens/cobertura2.png" alt="Cobertura 2">
+                </div>
+                <div class="slide fade">
+                    <img src="imagens/cobertura3.png" alt="Cobertura 3">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

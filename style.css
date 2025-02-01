@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Giga", serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('imagens/fundo_body.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 100px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 180px;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+}
+
+.contato img {
+    height: 100px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.contato img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contato-info span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.contato-info small {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+nav {
+    font-weight: bold;
+    gap: 20px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0px 48px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(0, 204, 255);
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: top, center;
+    padding: 2px 50px 0px 50px;
+    background: none;
+    color: white;
+    gap: 20px;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro-text {
+    max-width: 50%;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.intro-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0,0.3);
+}
+
+.intro-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e4e4e4;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #00cc44, #00a837);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.cta-button img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00cc44;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px 0px;
+}
+
+.benefits-list img {
+    width: 40px;
+    margin-right: 10px;
+}
+.carousel-container {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-out;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    margin-left: 100px;
+}
+.carousel-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 1000px;
+    height: 700px;
+    border-radius: 50px;
+}
+
+.fade {
+    animation: fadeEffect 1.0s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* Animação para entrada da esquerda */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animação para entrada da direita */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animação para entrada de baixo */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Classe geral para animações */
+.animate {
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0; /* Garante que não aparece antes da animação */
+}
+
+/* Ajustes para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Melhora o desempenho em dispositivos móveis */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* Reduz espaço lateral */
+    }
+
+    .logo img {
+        max-height: 100px; /* Reduz o tamanho do logo */
+    }
+
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .contato img {
+        height: 80px; /* Ajusta o tamanho do ícone */
+    }
+
+    .contato-info span, .contato-info small {
+        text-align: center; /* Centraliza o texto de contato */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adiciona espaçamento entre os links */
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav a {
+        padding: 10px 0; /* Remove excesso de espaço horizontal */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    .intro-section {
+        flex-direction: column;
+        padding: 20px; /* Ajusta o padding para telas menores */
+    }
+
+    .intro-text {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px; /* Adiciona espaço entre o texto e o carrossel */
+    }
+
+    .intro-text h1 {
+        font-size: 28px; /* Reduz o tamanho do título */
+    }
+
+    .intro-text p {
+        font-size: 16px; /* Reduz o tamanho do parágrafo */
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px; /* Ajusta o tamanho do botão */
+    }
+
+    .benefits-list li {
+        font-size: 14px; /* Reduz o tamanho do texto dos benefícios */
+        padding: 5px 0; /* Ajusta o espaçamento */
+    }
+
+    .carousel-container {
+        margin-left: 0; /* Centraliza o carrossel */
+        max-width: 100%; /* Ajusta para caber na tela menor */
+    }
+
+    .slide img {
+        width: 100%; /* Faz as imagens se ajustarem ao tamanho da tela */
+        height: auto; /* Mantém a proporção */
+    }
+
+    .prev, .next {
+        font-size: 20px; /* Reduz o tamanho das setas */
+        padding: 5px; /* Ajusta o tamanho dos botões */
+    }
+
+    .dots {
+        margin-top: 10px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px; /* Reduz o tamanho dos indicadores */
+    }
+}

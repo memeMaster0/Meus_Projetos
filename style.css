@@ -273,7 +273,7 @@ nav a:hover {
 
 /* Classe geral para animações */
 .animate {
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     opacity: 0; /* Garante que não aparece antes da animação */

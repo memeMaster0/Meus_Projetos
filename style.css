@@ -281,9 +281,9 @@ nav a:hover {
 
 /* Ajustes para telas menores que 768px (celulares) */
 @media (max-width: 768px) {
-    body {
+    /*body {
         background-attachment: scroll; /* Melhora o desempenho em dispositivos móveis */
-    }
+    
 
     header {
         flex-direction: column;

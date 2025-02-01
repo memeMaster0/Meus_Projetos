@@ -312,7 +312,7 @@ nav a:hover {
 
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px; /* Adiciona espaçamento entre os links */
         text-align: center;
         margin-top: 15px;

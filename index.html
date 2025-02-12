@@ -3,60 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <title>Coberturas | TETTO PROJETOS | Goiás</title>
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <title>Tetto Projetos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
 </head>
 
 <body>
 
-    <header class="animate" style="animation-name: slideInRight;">
+    <header class="animate" style="animation-name: slideInRight;" id="cabecalho">
         <div class="logo">
-            <img src="logo/logo.png" alt="Tetto Projetos Metálicos">
+            <img src="assets/logo/logo-branca.png" loading="lazy" alt="Tetto Projetos Metálicos">
         </div>
         <div class="contato">
-            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento">
-                <img src="icons/whatsapp-icon.png" alt="WhatsApp">
+            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" target="_blank">
+                <img src="assets/icons/whatsapp-icon.png" loading="lazy" alt="WhatsApp">
             </a>
             <div class="contato-info">
-                <span>(62) 9 9443-7852</span>
+                <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" target="_blank"><span>(62) 9 9443-7852</span></a>
                 <small>ORÇAMENTOS</small>
             </div>
         </div>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="#introducao">Introdução</a>
-            <a href="#quem-somos">Quem somos?</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#contato">Contato</a>
+            <a href="">Início</a>
+            <a href="#specialities">Introdução</a>
+            <a href="#products">Produtos</a>
+            <a href="#about-us">Quem somos?</a>
+            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" target="_blank">Contato</a>
         </nav>
     </header>
 
-    <section class="intro-section">
+    <section class="intro-section" id="section-1">
         <div class="intro-text animate" style="animation-name: slideInLeft;">
             <h1>Trabalhamos com Coberturas Metálicas</h1>
             <p>Pergolados de ferro, estruturas de policarbonato e muito mais!</p>
             <p>Precisa de um orçamento? Entre em contato clicando no botão abaixo:</p>
-            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" class="cta-button">
-                <img src="icons/whatsapp-icon.png" alt="WhatsApp"> Solicitar Orçamento
+            <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" class="cta-button" target="_blank">
+                <img src="assets/icons/whatsapp-icon.png" loading="lazy" alt="WhatsApp"> Solicitar Orçamento
             </a>
             <ul class="benefits-list">
-                <li><img src="icons/check-icon.png" alt="Check"> Materiais de alta qualidade</li>
-                <li><img src="icons/check-icon.png" alt="Check"> Projetos personalizados</li>
-                <li><img src="icons/check-icon.png" alt="Check"> Instalação rápida</li>
+                <li><img src="assets/icons/check-icon.png" loading="lazy" alt="Check"> Materiais de alta qualidade</li>
+                <li><img src="assets/icons/check-icon.png" loading="lazy" alt="Check"> Projetos personalizados</li>
+                <li><img src="assets/icons/check-icon.png" loading="lazy" alt="Check"> Instalação rápida</li>
             </ul>            
         </div>
         <div class="carousel-container" id="carousel">
             <div class="carousel">
                 <div class="slide fade">
-                    <img src="imagens/cobertura1.png" alt="Cobertura 1">
+                    <img src="assets/carousel-start/carousel-1.jpg" loading="lazy" alt="Cobertura 1">
                 </div>
                 <div class="slide fade">
-                    <img src="imagens/cobertura2.png" alt="Cobertura 2">
+                    <img src="assets/carousel-start/carousel-2.jpg" loading="lazy" alt="Cobertura 2">
                 </div>
                 <div class="slide fade">
-                    <img src="imagens/cobertura3.png" alt="Cobertura 3">
+                    <img src="assets/carousel-start/carousel-3.jpg" loading="lazy" alt="Cobertura 3">
                 </div>
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -69,29 +73,145 @@
         </div>
     </section>
 
-    <section class="specialties scroll-animate">
+    <section class="specialties scroll-animate" id="specialities">
         <h2>Especialistas em Coberturas</h2>
         <div class="specialties-layout">
-            <!-- Cards das specialties -->
             <div class="specialties-container">
                 <div class="specialty">
-                    <img src="imagens/mao-de-obra.jpg" alt="Mão de obra especializada">
-                    <h3>Mão de obra especializada</h3>
+                    <img src="assets/specialities-cape/mao-de-obra.jpg" loading="lazy" alt="Mão de obra especializada">
+                    <h3>Mão de Obra Especializada</h3>
                     <p>Temos mão de obra especializada para atender a demanda de serviços de cada cliente.</p>
                 </div>
                 <div class="specialty">
-                    <img src="imagens/materia-prima.jpg" alt="Matéria prima nobre">
-                    <h3>Matéria prima nobre</h3>
+                    <img src="assets/specialities-cape/materia-prima.jpg" loading="lazy" alt="Matéria prima nobre">
+                    <h3>Matéria Prima Nobre</h3>
                     <p>Nossa matéria prima é nobre, conta com a melhor durabilidade e estética para resultar em um trabalho impecável.</p>
                 </div>
+                <div class="specialty atendimento-personalizado">
+                    <img src="assets/specialities-cape/atendimento-personalizado.jpg" loading="lazy" alt="Atendimento Personalizado">
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Cada projeto é único. Nossa equipe acompanha você em todas as etapas, garantindo soluções personalizadas que atendam exatamente às suas necessidades.</p>
+                </div>
                 <div class="specialty">
-                    <img src="imagens/alta-qualidade.jpg" alt="Produtos de alta qualidade">
+                    <img src="assets/specialities-cape/alta-qualidade.jpg" loading="lazy" alt="Produtos de alta qualidade">
                     <h3>Produtos de alta qualidade</h3>
-                    <p>O resultado de ótima mão de obra e matéria prima não poderia ser diferente de um produto de altíssimo padrão.</p>
+                    <p>O resultado de ótima mão de obra, atendimento e matéria prima não poderia ser diferente de um produto de altíssimo padrão.</p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="products scroll-animate" id="products">
+        <h2>Nossos Serviços</h2>
+        <div class="products-layout">
+            <div class="products-cta-button-container">
+                <h3 class="cta-description">
+                    Entre em contato para projetos personalizados e <span>orçamento gratuito</span>!
+                </h3>
+                <a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" class="products-cta-button" target="_blank">
+                    <img src="assets/icons/whatsapp-icon.png" loading="lazy" alt="WhatsApp"> Solicitar Orçamento
+                </a>
+                <ul class="cta-benefits">
+                    <li><img src="assets/icons/check-icon.png" loading="lazy" alt="Check"> Materiais de alta qualidade</li>
+                    <li><img src="assets/icons/check-icon.png" loading="lazy" alt="Check"> Projetos personalizados</li>
+                    <li><img src="assets/icons/check-icon.png" loading="lazy" alt="Check"> Instalação rápida</li>
+                </ul> 
+            </div>
+            <div class="products-container">
+                <div class="product">
+                    <a href="products-html/policarbonato.html" target="_blank"><img src="assets/products-cape/policarbonato.jpg" loading="lazy" alt="Policarbonato Compacto"></a>
+                    <h3>Policarbonato Compacto</h3>
+                </div>
+                <div class="product">
+                    <a href="" target="_blank"><img src="assets/products-cape/forro-exterior.jpg" loading="lazy" alt="Cobertura com Forro Exterior"></a>
+                    <h3>Cobertura com <span id="forro-exterior">Forro Exterior</span></h3>
+                </div>
+                <div class="product">
+                    <a href="" target="_blank"><img src="assets/products-cape/forro-interior.jpg" loading="lazy" alt="Cobertura com Forro Interior"></a>
+                    <h3>Cobertura com <span id="forro-interior">Forro Interior</span></h3>
+                </div>
+                <div class="product">
+                    <a href="" target="_blank"><img src="assets/products-cape/pergolado.jpg" loading="lazy" alt="Pergolados"></a>
+                    <h3>Pergolados</h3>
+                </div>
+                <div class="product">
+                    <a href="" target="_blank"><img src="assets/products-cape/corte-laser.jpg" loading="lazy"alt="Corte a Laser"></a>
+                    <h3>Corte a Laser</h3>
+                </div>
+                <div class="product">
+                    <a href="" target="_blank"><img src="assets/products-cape/aco-corten.jpg" loading="lazy" alt="Aço Corten"></a>
+                    <h3>Aço Corten</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="about-us-container scroll-animate" id="about-us">
+        <div class="about-us-slide">
+            <div class="about-us-item" style="background-image: url(assets/carousel-end/carousel-1.jpg);">
+                <div class="about-us-content">
+                    <div class="about-us-name">QUEM SOMOS?</div>
+                    <div class="about-us-des">
+                        Somos uma empresa atuante no ramo de metalúrgica e serralheria artística. 
+                        Contamos com mão de obra especializada para produção de coberturas e projetos metálicos. 
+                        Reproduzimos, criamos e executamos soluções metálicas para ambientes residenciais e/ou corporativos.
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-item" style="background-image: url(assets/carousel-end/carousel-2.jpg);">
+                <div class="about-us-content">
+                    <div class="about-us-name">QUEM SOMOS?</div>
+                    <div class="about-us-des">
+                        Somos uma empresa atuante no ramo de metalúrgica e serralheria artística. 
+                        Contamos com mão de obra especializada para produção de coberturas e projetos metálicos. 
+                        Reproduzimos, criamos e executamos soluções metálicas para ambientes residenciais e/ou corporativos.
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-item" style="background-image: url(assets/carousel-end/carousel-3.jpg);">
+                <div class="about-us-content">
+                    <div class="about-us-name">QUEM SOMOS?</div>
+                    <div class="about-us-des">
+                        Somos uma empresa atuante no ramo de metalúrgica e serralheria artística. 
+                        Contamos com mão de obra especializada para produção de coberturas e projetos metálicos. 
+                        Reproduzimos, criamos e executamos soluções metálicas para ambientes residenciais e/ou corporativos.
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-item" style="background-image: url(assets/carousel-end/carousel-4.jpg);">
+                <div class="about-us-content">
+                    <div class="about-us-name">QUEM SOMOS?</div>
+                    <div class="about-us-des">
+                        Somos uma empresa atuante no ramo de metalúrgica e serralheria artística. 
+                        Contamos com mão de obra especializada para produção de coberturas e projetos metálicos. 
+                        Reproduzimos, criamos e executamos soluções metálicas para ambientes residenciais e/ou corporativos.
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-item" style="background-image: url(assets/carousel-end/carousel-5.jpg);">
+                <div class="about-us-content">
+                    <div class="about-us-name">QUEM SOMOS?</div>
+                    <div class="about-us-des">
+                        Somos uma empresa atuante no ramo de metalúrgica e serralheria artística. 
+                        Contamos com mão de obra especializada para produção de coberturas e projetos metálicos. 
+                        Reproduzimos, criamos e executamos soluções metálicas para ambientes residenciais e/ou corporativos.
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-item" style="background-image: url(assets/carousel-end/carousel-6.jpg);">
+                <div class="about-us-content">
+                    <div class="about-us-name">QUEM SOMOS?</div>
+                    <div class="about-us-des">
+                        Somos uma empresa atuante no ramo de metalúrgica e serralheria artística. 
+                        Contamos com mão de obra especializada para produção de coberturas e projetos metálicos. 
+                        Reproduzimos, criamos e executamos soluções metálicas para ambientes residenciais e/ou corporativos.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us-button">
+            <button class="about-us-prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="about-us-next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
@@ -99,38 +219,21 @@
                 <div class="footer-col">
                     <h4>empresa</h4>
                     <ul>
-                        <li><a href="#">sobre nós</a></li>
-                        <li><a href="#">nossos serviços</a></li>
-                        <li><a href="#">política de privacidade</a></li>
-                        <li><a href="#">programa de afiliação</a></li>
+                        <li><a href="#about-us">sobre nós</a></li>
+                        <li><a href="#products">nossos serviços</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>obter ajuda</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">envio</a></li>
-                        <li><a href="#">retornos</a></li>
-                        <li><a href="#">status do pedido</a></li>
-                        <li><a href="#">opções de pagamento</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>loja online</h4>
-                    <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5562994437852&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento" target="_blank">(62) 9 9443-7852</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>siga-nos</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -139,7 +242,7 @@
             <p>@ 2025 Tetto Projetos Metálicos - Todos os direitos reservados.</p>
         </div>
    </footer>
-
+   <button id="backToTop" class="back-to-top">↑</button>
     <script src="script.js"></script>
 </body>
 </html>

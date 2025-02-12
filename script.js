@@ -1,7 +1,7 @@
-// Garantir que o container do carrossel seja animado ao carregar a página
+// Inicializa o carrossel
 window.addEventListener("load", () => {
     const carousel = document.getElementById("carousel");
-    carousel.classList.add("animate");
+    if (carousel) carousel.classList.add("animate");
 });
 
 // Inicializa o índice do slide
@@ -15,11 +15,11 @@ function moveSlide(n) {
 
 // Função para mostrar o slide atual
 function showSlides(n) {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
 
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -33,33 +33,60 @@ function showSlides(n) {
 }
 
 // Configuração para mudança automática dos slides
-setInterval(function() {
+setInterval(() => {
     moveSlide(1);
 }, 5000);
 
 // Detectar elementos com a classe "scroll-animate"
 const scrollElements = document.querySelectorAll(".scroll-animate");
 
-// Função para verificar se o elemento está na viewport
-const isElementInViewport = (el) => {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top <= window.innerHeight && // O topo do elemento está dentro da altura da viewport
-        rect.bottom >= 0 // O fundo do elemento está acima do final da viewport
-    );
-};
-
-// Função para animar os elementos na viewport
-const scrollHandler = () => {
-    scrollElements.forEach((el) => {
-        if (isElementInViewport(el)) {
-            el.classList.add("animate");
+// Usar Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate"); // Adiciona a animação
+            observer.unobserve(entry.target); // Para de observar o elemento
         }
     });
-};
+}, {
+    threshold: 0.15, // Só dispara quando 15% do elemento está visível
+    rootMargin: "0px 0px -50px 0px", // Inicia a animação antes de o elemento estar totalmente visível
+});
 
-// Escutar o evento de scroll
-window.addEventListener("scroll", scrollHandler);
+// Adicionar os elementos ao observer
+scrollElements.forEach((el) => observer.observe(el));
 
-// Garantir que funcione também no carregamento inicial
-window.addEventListener("load", scrollHandler);
+// --- Função do botão "Voltar ao topo" ---
+
+// Seleciona o botão
+const backToTopButton = document.getElementById("backToTop");
+
+// Mostra ou esconde o botão com base na rolagem
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) { // Exibe o botão quando rolar mais de 300px
+        backToTopButton.classList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+});
+
+// Rola suavemente para o topo ao clicar no botão
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Rola suavemente
+    });
+});
+
+let next = document.querySelector('.about-us-next')
+let prev = document.querySelector('.about-us-prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.about-us-item')
+    document.querySelector('.about-us-slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.about-us-item')
+    document.querySelector('.about-us-slide').prepend(items[items.length - 1]) // here the length of items = 6
+})

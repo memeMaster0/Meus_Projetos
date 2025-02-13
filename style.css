@@ -958,6 +958,7 @@ nav a:hover {
     }
 
     .about-us-container {
+        height: 300px;
         width: 450px;
     }
 
@@ -1003,10 +1004,12 @@ nav a:hover {
     }
 
     .about-us-content .about-us-name{
+        width: 150px;
         font-size: 22px;
     }
     
     .about-us-content .about-us-des{
+        width: 200px;
         font-size: 11px;
     }
 

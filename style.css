@@ -904,63 +904,12 @@ nav a:hover {
         padding: 10px;
     }
     
-    /* Ajustes para Products */
-    .products {
-        padding: 30px 20px;
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    .products h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    
-    .products-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .products-cta-button-container {
-        width: 100%;
-    }
-    
-    .products-cta-button {
-        font-size: 20px;
-        padding: 12px 20px;
-        width: 80%;
-        margin: auto;
-    }
-    
-    .products-container {
-        gap: 10px;
-    }
-    
-    .product {
-        max-width: 100%;
-        width: 90%;
-    }
-    
-    .product img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .product h3 {
-        font-size: 22px;
-        padding: 10px;
-        text-align: center;
-        white-space: normal;
-        word-wrap: break-word;
-    }
-    
     /* Ajustes para About-Us - Mobile */
     .about-us-container {
-        width: 95%;
+        width: 100%;
         height: auto;
         margin: 40px auto;
-        padding: 15px;
+        padding: 10px;
         text-align: center;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 10px;
@@ -974,12 +923,13 @@ nav a:hover {
     }
     
     .about-us-slide .about-us-item {
-        width: 100%;
+        width: 90%;
         height: auto;
         position: relative;
         transform: none;
         left: 0;
         border-radius: 10px;
+        margin-bottom: 15px;
     }
     
     .about-us-content {
@@ -995,10 +945,11 @@ nav a:hover {
         color: white;
         padding: 10px;
         border-radius: 8px;
+        display: block;
     }
     
     .about-us-content .about-us-des {
-        font-size: 18px;
+        font-size: 16px;
         color: white;
         padding: 10px;
         border-radius: 8px;
@@ -1030,34 +981,5 @@ nav a:hover {
     
     .about-us-button button:hover {
         transform: scale(1.1);
-    }
-    
-    .footer {
-        padding: 30px 10px;
-    }
-    
-    .footer-row {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .footer-container {
-        max-width: 100%;
-    }
-    
-    .footer-col h4 {
-        font-size: 16px;
-    }
-    
-    .footer-col ul li a {
-        font-size: 14px;
-    }
-    
-    .back-to-top {
-        width: 50px;
-        height: 50px;
-        font-size: 14px;
-        line-height: 50px;
     }
 }

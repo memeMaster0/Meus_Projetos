@@ -182,8 +182,8 @@ function ajustarResponsividade() {
 
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
-            aboutUsContainer.style.width = "720px";
-            aboutUsContainer.style.height = "600px";
+            aboutUsContainer.style.width = "500px";
+            aboutUsContainer.style.height = "400px";
             aboutUsContainer.style.margin = "150px auto";
             aboutUsContainer.style.padding = "0px";
             aboutUsContainer.style.borderRadius = "20px";

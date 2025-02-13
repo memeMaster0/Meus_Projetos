@@ -906,6 +906,7 @@ nav a:hover {
 
     .products {
         width: 100%;
+        flex-direction: column;
     }
     
     .about-us-container {
@@ -935,6 +936,7 @@ nav a:hover {
     
     .footer {
         padding: 30px 10px;
+        margin-top: 150px;
     }
     
     .footer-row {

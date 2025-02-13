@@ -831,8 +831,6 @@ nav a:hover {
     
     body {
         width: 100%;
-        background-size: cover;
-        background-attachment: scroll;
         text-align: center;
     }
     

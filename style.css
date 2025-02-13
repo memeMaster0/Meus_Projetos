@@ -901,7 +901,7 @@ nav a:hover {
     }
     
     .specialties {
-        background-color: #f9f9f9
+        background-color: #f9f9f9;
     }
 
     .specialties-container, .products-container {
@@ -914,7 +914,7 @@ nav a:hover {
         padding: 70px 20px 150px 20px;
         max-width: 100%;
         text-align: center;
-        background-color: #f9f9f9
+        background-color: #f9f9f9;
     }
     
     .products h2 {

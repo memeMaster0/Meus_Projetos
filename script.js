@@ -1,3 +1,16 @@
+// Ajuste a responsividade do About-Us ao carregar a página
+document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll(".about-us-item");
+
+    if (window.innerWidth <= 768) {
+        items.forEach(item => {
+            item.style.width = "100%";
+            item.style.height = "auto";
+            item.style.marginBottom = "15px";
+        });
+    }
+});
+
 // Inicializa o carrossel
 window.addEventListener("load", () => {
     const carousel = document.getElementById("carousel");

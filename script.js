@@ -122,6 +122,7 @@ function ajustarResponsividade() {
 
         let aboutUsSlide = document.querySelector(".about-us-slide");
         if (aboutUsSlide) {
+            aboutUsSlide.style.width = "50%"
             aboutUsSlide.style.display = "flex";
             aboutUsSlide.style.flexDirection = "column";
             aboutUsSlide.style.alignItems = "center";

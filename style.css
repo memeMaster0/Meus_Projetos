@@ -830,7 +830,7 @@ nav a:hover {
     }
     
     body {
-        max-width: 400px;
+        max-width: 768px;
         background-size: cover;
         background-attachment: scroll;
         text-align: center;
@@ -958,7 +958,7 @@ nav a:hover {
 
     .about-us-container {
         height: 300px;
-        width: 450px;
+        width: 400px;
     }
 
     .about-us-item .about-us-content{

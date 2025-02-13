@@ -955,6 +955,58 @@ nav a:hover {
         word-wrap: break-word;
     }
 
+    .about-us-container {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .about-us-item {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-content {
+        width: 90%;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .about-us-content .about-us-name {
+        font-size: 22px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+        display: block;
+    }
+
+    .about-us-content .about-us-des {
+        font-size: 18px;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
     .footer {
         padding: 30px 10px;
     }

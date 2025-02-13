@@ -824,13 +824,13 @@ nav a:hover {
 }
 
 /* Mobile.css - Estilos para telas menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     html {
         scroll-behavior: smooth;
     }
     
     body {
-        max-width: 450px;
+        max-width: 400px;
         background-size: cover;
         background-attachment: scroll;
         text-align: center;
@@ -900,10 +900,6 @@ nav a:hover {
         height: auto;
     }
     
-    .specialties {
-        background-color: white;
-    }
-
     .specialties-container, .products-container {
         flex-direction: column;
         padding: 10px;
@@ -914,7 +910,6 @@ nav a:hover {
         padding: 70px 20px 150px 20px;
         max-width: 100%;
         text-align: center;
-        background-color: white;
     }
     
     .products h2 {

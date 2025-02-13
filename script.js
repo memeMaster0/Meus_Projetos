@@ -112,7 +112,7 @@ function ajustarResponsividade() {
         // Ajustes no About-Us (Correção de alinhamento)
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
-            aboutUsContainer.style.width = "500px";
+            aboutUsContainer.style.width = "95%";
             aboutUsContainer.style.height = "auto";
             aboutUsContainer.style.margin = "20px auto";
             aboutUsContainer.style.padding = "10px";
@@ -122,7 +122,6 @@ function ajustarResponsividade() {
 
         let aboutUsSlide = document.querySelector(".about-us-slide");
         if (aboutUsSlide) {
-            aboutUsSlide.style.width = "50%"
             aboutUsSlide.style.display = "flex";
             aboutUsSlide.style.flexDirection = "column";
             aboutUsSlide.style.alignItems = "center";
@@ -130,7 +129,7 @@ function ajustarResponsividade() {
 
         let aboutUsItems = document.querySelectorAll(".about-us-item");
         aboutUsItems.forEach(item => {
-            item.style.width = "50%";
+            item.style.width = "90%";
             item.style.height = "auto";
             item.style.marginBottom = "10px";
         });
@@ -138,14 +137,14 @@ function ajustarResponsividade() {
         let aboutUsContent = document.querySelector(".about-us-content");
         if (aboutUsContent) {
             aboutUsContent.style.textAlign = "center";
-            aboutUsContent.style.width = "50%";
+            aboutUsContent.style.width = "90%";
             aboutUsContent.style.margin = "0 auto";
         }
 
         // Ajustes no carrossel principal
         let carouselImages = document.querySelectorAll(".carousel img");
         carouselImages.forEach(img => {
-            img.style.width = "50%";
+            img.style.width = "100%";
             img.style.height = "auto";
         });
 
@@ -183,8 +182,8 @@ function ajustarResponsividade() {
 
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
-            aboutUsContainer.style.width = "1280px";
-            aboutUsContainer.style.height = "880px";
+            aboutUsContainer.style.width = "720px";
+            aboutUsContainer.style.height = "600px";
             aboutUsContainer.style.margin = "150px auto";
             aboutUsContainer.style.padding = "0px";
             aboutUsContainer.style.borderRadius = "20px";

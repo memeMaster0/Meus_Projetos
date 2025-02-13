@@ -191,8 +191,8 @@ function ajustarResponsividade() {
 
         let aboutUsItems = document.querySelectorAll(".about-us-item");
         aboutUsItems.forEach(item => {
-            item.style.width = "200px";
-            item.style.height = "300px";
+            item.style.width = "500px";
+            item.style.height = "500px";
             item.style.marginBottom = "0px";
         });
 

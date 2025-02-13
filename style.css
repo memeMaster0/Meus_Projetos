@@ -955,12 +955,12 @@ nav a:hover {
         word-wrap: break-word;
     }
     
-    /* Ajustes para About-Us */
+    /* Ajustes para About-Us - Mobile */
     .about-us-container {
-        width: 100%;
+        width: 95%;
         height: auto;
         margin: 40px auto;
-        padding: 10px;
+        padding: 15px;
         text-align: center;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 10px;
@@ -980,7 +980,6 @@ nav a:hover {
         transform: none;
         left: 0;
         border-radius: 10px;
-        margin-bottom: 15px;
     }
     
     .about-us-content {
@@ -996,11 +995,10 @@ nav a:hover {
         color: white;
         padding: 10px;
         border-radius: 8px;
-        display: block;
     }
     
     .about-us-content .about-us-des {
-        font-size: 16px;
+        font-size: 18px;
         color: white;
         padding: 10px;
         border-radius: 8px;
@@ -1033,7 +1031,6 @@ nav a:hover {
     .about-us-button button:hover {
         transform: scale(1.1);
     }
-
     
     .footer {
         padding: 30px 10px;

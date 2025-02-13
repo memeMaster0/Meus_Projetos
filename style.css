@@ -956,6 +956,7 @@ nav a:hover {
     }
 
     .about-us-container {
+        width: 300px;
         display: none;
     }
 

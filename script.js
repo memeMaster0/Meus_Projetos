@@ -130,7 +130,7 @@ function ajustarResponsividade() {
 
         let aboutUsItems = document.querySelectorAll(".about-us-item");
         aboutUsItems.forEach(item => {
-            item.style.width = "90%";
+            item.style.width = "50%";
             item.style.height = "auto";
             item.style.marginBottom = "10px";
         });
@@ -138,14 +138,14 @@ function ajustarResponsividade() {
         let aboutUsContent = document.querySelector(".about-us-content");
         if (aboutUsContent) {
             aboutUsContent.style.textAlign = "center";
-            aboutUsContent.style.width = "90%";
+            aboutUsContent.style.width = "50%";
             aboutUsContent.style.margin = "0 auto";
         }
 
         // Ajustes no carrossel principal
         let carouselImages = document.querySelectorAll(".carousel img");
         carouselImages.forEach(img => {
-            img.style.width = "100%";
+            img.style.width = "50%";
             img.style.height = "auto";
         });
 

@@ -100,6 +100,7 @@ function ajustarResponsividade() {
     
     // Ajustes gerais para mobile
     if (larguraTela <= 768) {
+        document.body.style.maxWidth = "1000px";
         document.body.style.padding = "10px";
 
         // Header e Navegação

@@ -958,12 +958,12 @@ nav a:hover {
     }
 
     .about-us-container {
-        width: 500px;
+        width: 450px;
     }
 
     .about-us-container .about-us-slide .about-us-item{
-        width: 200px;
-        height: 300px;
+        width: 70px;
+        height: 140px;
         position: absolute;
         top: 50%;
         transform: translate(0, 10%);
@@ -1000,6 +1000,14 @@ nav a:hover {
     .about-us-slide .about-us-item:nth-child(n + 6){
         left: calc(30% + 300px);
         opacity: 0;
+    }
+
+    .about-us-content .about-us-name{
+        font-size: 22px;
+    }
+    
+    .about-us-content .about-us-des{
+        font-size: 11px;
     }
 
     .footer {

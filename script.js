@@ -112,7 +112,7 @@ function ajustarResponsividade() {
         // Ajustes no About-Us (Correção de alinhamento)
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
-            aboutUsContainer.style.width = "95%";
+            aboutUsContainer.style.width = "50%";
             aboutUsContainer.style.height = "auto";
             aboutUsContainer.style.margin = "20px auto";
             aboutUsContainer.style.padding = "10px";

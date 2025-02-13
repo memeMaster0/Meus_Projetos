@@ -109,22 +109,37 @@ function ajustarResponsividade() {
         document.querySelector("nav").style.flexDirection = "column";
         document.querySelector("nav").style.gap = "10px";
 
-        // Ajustes no About-Us
+        // Ajustes no About-Us (Correção de alinhamento)
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
-            aboutUsContainer.style.width = "100%";
+            aboutUsContainer.style.width = "95%";
             aboutUsContainer.style.height = "auto";
             aboutUsContainer.style.margin = "20px auto";
             aboutUsContainer.style.padding = "10px";
             aboutUsContainer.style.borderRadius = "10px";
+            aboutUsContainer.style.textAlign = "center";
+        }
+
+        let aboutUsSlide = document.querySelector(".about-us-slide");
+        if (aboutUsSlide) {
+            aboutUsSlide.style.display = "flex";
+            aboutUsSlide.style.flexDirection = "column";
+            aboutUsSlide.style.alignItems = "center";
         }
 
         let aboutUsItems = document.querySelectorAll(".about-us-item");
         aboutUsItems.forEach(item => {
-            item.style.width = "100%";
+            item.style.width = "90%";
             item.style.height = "auto";
-            item.style.marginBottom = "15px";
+            item.style.marginBottom = "10px";
         });
+
+        let aboutUsContent = document.querySelector(".about-us-content");
+        if (aboutUsContent) {
+            aboutUsContent.style.textAlign = "center";
+            aboutUsContent.style.width = "90%";
+            aboutUsContent.style.margin = "0 auto";
+        }
 
         // Ajustes no carrossel principal
         let carouselImages = document.querySelectorAll(".carousel img");

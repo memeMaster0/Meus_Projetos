@@ -906,7 +906,7 @@ nav a:hover {
     
     /* Ajustes para Products */
     .products {
-        padding: 30px 20px;
+        padding: 70px 20px;
         max-width: 100%;
         text-align: center;
     }
@@ -1032,4 +1032,3 @@ nav a:hover {
         line-height: 50px;
     }
 }
-

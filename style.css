@@ -830,6 +830,7 @@ nav a:hover {
     }
     
     body {
+        max-width: 450px;
         background-size: cover;
         background-attachment: scroll;
         text-align: center;
@@ -962,9 +963,14 @@ nav a:hover {
         width: 450px;
     }
 
+    .about-us-item .about-us-content{
+        top: 15%;
+        left: 100px;
+    }
+    
     .about-us-container .about-us-slide .about-us-item{
         width: 70px;
-        height: 140px;
+        height: 100px;
         position: absolute;
         top: 50%;
         transform: translate(0, 10%);
@@ -988,29 +994,29 @@ nav a:hover {
     
     
     .about-us-slide .about-us-item:nth-child(3){
-        left: 30%;
+        left: 32%;
     }
     .about-us-slide .about-us-item:nth-child(4){
-        left: calc(30% + 100px);
+        left: calc(32% + 100px);
     }
     .about-us-slide .about-us-item:nth-child(5){
-        left: calc(30% + 200px);
+        left: calc(32% + 200px);
     }
     
     /* here n = 0, 1, 2, 3,... */
     .about-us-slide .about-us-item:nth-child(n + 6){
-        left: calc(30% + 300px);
+        left: calc(32% + 300px);
         opacity: 0;
     }
 
     .about-us-content .about-us-name{
         width: 150px;
-        font-size: 22px;
+        font-size: 15px;
     }
     
     .about-us-content .about-us-des{
-        width: 200px;
-        font-size: 11px;
+        width: 300px;
+        font-size: 8px;
     }
 
     .footer {

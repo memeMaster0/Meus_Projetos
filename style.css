@@ -956,55 +956,62 @@ nav a:hover {
     }
 
     .about-us-container {
-        width: 95%;
-        height: auto;
-        margin: 20px auto;
-        padding: 10px;
-        border-radius: 10px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 95% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        padding: 10px !important;
+        border-radius: 10px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .about-us-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
     }
 
     .about-us-item {
-        width: 90%;
-        height: auto;
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .about-us-content {
-        width: 90%;
-        text-align: center;
-        margin: 10px auto;
+        text-align: center !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        color: white !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
     }
 
     .about-us-content .about-us-name {
-        font-size: 22px;
-        font-weight: bold;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 8px;
-        border-radius: 8px;
-        display: block;
+        font-size: 22px !important;
+        font-weight: bold !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        color: white !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
     }
 
     .about-us-content .about-us-des {
-        font-size: 18px;
-        color: white;
-        padding: 10px;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.2);
+        font-size: 18px !important;
+        color: white !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
+        background: rgba(255, 255, 255, 0.2) !important;
     }
 
     .footer {

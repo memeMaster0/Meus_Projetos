@@ -110,34 +110,40 @@ function ajustarResponsividade() {
         document.querySelector("nav").style.flexDirection = "column";
         document.querySelector("nav").style.gap = "10px";
 
-        // Ajustes no About-Us
+        // Ajustes no About-Us (Correção de alinhamento)
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
             aboutUsContainer.style.width = "95%";
+            aboutUsContainer.style.maxWidth = "400px";
             aboutUsContainer.style.height = "auto";
             aboutUsContainer.style.margin = "20px auto";
             aboutUsContainer.style.padding = "10px";
             aboutUsContainer.style.borderRadius = "10px";
             aboutUsContainer.style.textAlign = "center";
+            aboutUsContainer.style.display = "flex";
+            aboutUsContainer.style.flexDirection = "column";
+            aboutUsContainer.style.alignItems = "center";
+            aboutUsContainer.style.justifyContent = "center";
         }
 
-        // 📌 Código que você adicionou 📌
         let aboutUsSlide = document.querySelector(".about-us-slide");
-        let aboutUsItems = document.querySelectorAll(".about-us-item");
-
         if (aboutUsSlide) {
             aboutUsSlide.style.display = "flex";
             aboutUsSlide.style.flexDirection = "column";
             aboutUsSlide.style.alignItems = "center";
+            aboutUsSlide.style.justifyContent = "center";
+            aboutUsSlide.style.width = "100%";
         }
 
+        let aboutUsItems = document.querySelectorAll(".about-us-item");
         aboutUsItems.forEach(item => {
-            item.style.width = "90%";
+            item.style.width = "100%";
             item.style.height = "auto";
             item.style.marginBottom = "10px";
             item.style.display = "flex";
             item.style.flexDirection = "column";
             item.style.alignItems = "center";
+            item.style.justifyContent = "center";
         });
 
         let aboutUsContent = document.querySelector(".about-us-content");
@@ -145,6 +151,10 @@ function ajustarResponsividade() {
             aboutUsContent.style.textAlign = "center";
             aboutUsContent.style.width = "90%";
             aboutUsContent.style.margin = "0 auto";
+            aboutUsContent.style.background = "rgba(0, 0, 0, 0.8)";
+            aboutUsContent.style.color = "white";
+            aboutUsContent.style.padding = "10px";
+            aboutUsContent.style.borderRadius = "8px";
         }
 
         // Ajustes no carrossel principal
@@ -188,8 +198,8 @@ function ajustarResponsividade() {
 
         let aboutUsContainer = document.querySelector(".about-us-container");
         if (aboutUsContainer) {
-            aboutUsContainer.style.width = "500px";
-            aboutUsContainer.style.height = "400px";
+            aboutUsContainer.style.width = "1280px";
+            aboutUsContainer.style.height = "880px";
             aboutUsContainer.style.margin = "150px auto";
             aboutUsContainer.style.padding = "0px";
             aboutUsContainer.style.borderRadius = "20px";

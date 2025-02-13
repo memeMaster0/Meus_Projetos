@@ -955,6 +955,10 @@ nav a:hover {
         word-wrap: break-word;
     }
 
+    .about-us-container {
+        display: none;
+    }
+
     .footer {
         padding: 30px 10px;
     }

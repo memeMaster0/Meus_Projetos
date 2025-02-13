@@ -1,16 +1,3 @@
-// Ajuste a responsividade do About-Us ao carregar a página
-document.addEventListener("DOMContentLoaded", function () {
-    let items = document.querySelectorAll(".about-us-item");
-
-    if (window.innerWidth <= 768) {
-        items.forEach(item => {
-            item.style.width = "100%";
-            item.style.height = "auto";
-            item.style.marginBottom = "15px";
-        });
-    }
-});
-
 // Inicializa o carrossel
 window.addEventListener("load", () => {
     const carousel = document.getElementById("carousel");
@@ -93,3 +80,13 @@ backToTopButton.addEventListener("click", () => {
 
 let next = document.querySelector('.about-us-next')
 let prev = document.querySelector('.about-us-prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.about-us-item')
+    document.querySelector('.about-us-slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.about-us-item')
+    document.querySelector('.about-us-slide').prepend(items[items.length - 1]) // here the length of items = 6
+})

@@ -908,7 +908,7 @@ nav a:hover {
     
     /* Ajustes para Products */
     .products {
-        padding: 100px 20px;
+        padding: 70px 20px 150px 20px;
         max-width: 100%;
         text-align: center;
         
@@ -964,8 +964,8 @@ nav a:hover {
     }
 
     .about-us-item .about-us-content{
-        top: 15%;
-        left: 100px;
+        top: 30%;
+        left: 20px;
     }
     
     .about-us-container .about-us-slide .about-us-item{

@@ -949,11 +949,13 @@ nav a:hover {
     
     /* Ajustes para About-Us */
     .about-us-container {
-        width: 90%;
+        width: 95%;
         height: auto;
         margin: 40px auto;
         padding: 15px;
         text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
     }
     
     .about-us-slide {
@@ -964,22 +966,41 @@ nav a:hover {
     }
     
     .about-us-slide .about-us-item {
-        width: 90%;
+        width: 100%;
         height: auto;
         position: relative;
         transform: none;
         left: 0;
+        border-radius: 10px;
     }
     
     .about-us-content {
         text-align: center;
         width: 100%;
+        padding: 10px;
     }
     
-    .about-us-content .about-us-name, .about-us-content .about-us-des {
-        width: 100%;
-        padding: 15px;
+    .about-us-content .about-us-name {
+        font-size: 24px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .about-us-content .about-us-des {
         font-size: 18px;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .about-us-slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
     
     .footer {
@@ -1011,3 +1032,4 @@ nav a:hover {
         line-height: 50px;
     }
 }
+

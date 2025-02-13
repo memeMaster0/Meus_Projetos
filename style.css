@@ -903,6 +903,10 @@ nav a:hover {
         flex-direction: column;
         padding: 10px;
     }
+
+    .products {
+        width: 100%;
+    }
     
     .about-us-container {
         width: 100%;

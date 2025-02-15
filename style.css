@@ -910,7 +910,7 @@ nav a:hover {
     .intro-text h1::after {
         content: "";
         display: block;
-        width: 50%;
+        width: 70%;
         height: 4px;
         background-color: #ffc107;
         margin: 10px auto 20px auto;

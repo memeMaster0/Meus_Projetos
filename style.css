@@ -942,6 +942,9 @@ nav a:hover {
     .specialties {
         position: relative;
         margin-right: auto;
+        padding: 70px 50px 120px 50px;
+        max-width: 100%;
+        text-align: center;
     }
 
     .specialties-container, .products-container {
@@ -949,18 +952,38 @@ nav a:hover {
         padding: 10px;
     }
     
+    .specialties h2 {
+        font-size: 28px;
+    }
+
+    .specialty h3 {
+        font-size: 22px;
+    }
+
+    .specialty p {
+        font-size: 18px;
+    }
+
+    .cta-description {
+        font-size: 22px;
+    }
+
+    .cta-description span {
+        font-size: 26px;
+    }
+
     .products {
-        padding: 70px 50px 200px 120px;
-        max-width: 90%;
+        padding: 70px 20px 150px 80px;
+        max-width: 100%;
         text-align: center;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 96%);
     }
     
     .products h2 {
-        font-size: 28px;
+        font-size: 30px;
         margin-bottom: 20px;
     }
-    
+
     .products-layout {
         flex-direction: column;
         align-items: center;
@@ -1083,7 +1106,7 @@ nav a:hover {
     
     .footer-row {
         flex-direction: row;
-        gap: 70px;
+        gap: 30px;
         text-align: center;
     }
     

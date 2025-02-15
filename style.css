@@ -849,7 +849,7 @@ nav a:hover {
         padding: 0;
         flex-direction: column;
         align-items: center;
-        max-width: 90%;
+        max-width: 100%;
         margin-top: 30px;
     }
     
@@ -859,8 +859,8 @@ nav a:hover {
     }
 
     .logo img {
-        margin-right: 50px;
-        max-height: 120px;
+        margin-right: 100px;
+        max-height: 150px;
     }
     
     .contato img {
@@ -878,7 +878,7 @@ nav a:hover {
     }
     
     nav {
-        max-width: 90%;
+        max-width: 100%;
         display: flex;
         flex-direction: row;
         gap: 20px;

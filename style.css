@@ -862,12 +862,12 @@ nav a:hover {
     }
 
     .logo img {
-        margin-right: 40px;
-        max-height: 150px;
+        margin-right: 50px;
+        max-height: 120px;
     }
     
     .contato img {
-        height: 80px;
+        height: 70px;
     }
 
     .contato {
@@ -877,7 +877,7 @@ nav a:hover {
     }
     
     .contato-info span, .contato-info small {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     nav {
@@ -885,13 +885,13 @@ nav a:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 18px;
         margin-bottom: 40px;
     }
 
     nav a {
         padding: 5px;
-        font-size: 16px;
+        font-size: 13px;
     }
     
     .intro-section {
@@ -989,7 +989,7 @@ nav a:hover {
     
     .product {
         max-width: 100%;
-        width: 90%;
+        width: 100%;
     }
     
     .product img {
@@ -1051,7 +1051,7 @@ nav a:hover {
     }
 
     .about-us-slide .about-us-item:nth-child(n + 6){
-        left: calc(35% + 240px);
+        left: calc(35% + 200px);
         opacity: 0;
     }
 

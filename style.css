@@ -975,6 +975,7 @@ nav a:hover {
         font-size: 25px;
         display: flex;
         margin: auto;
+        padding: 10px;
     }
 
     .products-cta-button img {

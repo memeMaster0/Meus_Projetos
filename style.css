@@ -977,7 +977,7 @@ nav a:hover {
         transform: translate(0, 30%);
         border-radius: 20px;
         box-shadow: 0 5px 10px #505050;
-        background-position: 50% 50%;
+        background-position: 50% 10%;
         background-size: cover;
         display: inline-block;
         transition: 0.5s;
@@ -1007,16 +1007,16 @@ nav a:hover {
     .about-us-slide .about-us-item:nth-child(n + 6){
         left: calc(35% + 240px);
         opacity: 0;
-    }*/
+    }
 
     .about-us-content .about-us-name{
-        width: 150px;
-        font-size: 15px;
+        width: 230px;
+        font-size: 25px;
     }
     
     .about-us-content .about-us-des{
         width: 300px;
-        font-size: 8px;
+        font-size: 11px;
         margin-top: 10px;
     }
 

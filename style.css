@@ -859,12 +859,12 @@ nav a:hover {
     }
 
     .logo img {
-        margin: auto;
-        max-height: 130px;
+        margin-right: 80px;
+        max-height: 150px;
     }
     
     .contato img {
-        height: 80px;
+        height: 100px;
     }
 
     .contato {

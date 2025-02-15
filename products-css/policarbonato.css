@@ -448,6 +448,8 @@ nav a:hover {
     }
     
     .footer-col ul li a {
+        display: flex;
+        text-align: left;
         font-size: 14px;
     }
 

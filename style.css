@@ -1082,7 +1082,7 @@ nav a:hover {
     
     .footer-row {
         flex-direction: row;
-        gap: 30px;
+        gap: 70px;
         text-align: center;
     }
     
@@ -1094,6 +1094,10 @@ nav a:hover {
         font-size: 16px;
     }
     
+    .footer-col ul {
+        text-align: left;
+    }
+
     .footer-col ul li a {
         font-size: 14px;
     }

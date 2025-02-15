@@ -828,15 +828,15 @@ nav a:hover {
     html {
         scroll-behavior: smooth;
     }
-    
+
     body {
-        width: 100%;
+        width: 500px;
         display: flex; /* Ativa Flexbox */
-        flex-direction: column; /* Mantém os elementos empilhados */
-        justify-content: center; /* Centraliza verticalmente */
-        align-items: center; /* Centraliza horizontalmente */
-        text-align: center; /* Centraliza o texto */
-        margin: 0; /* Remove margens padrão */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
         padding: 0;
     }
 
@@ -933,7 +933,7 @@ nav a:hover {
     .products-cta-button {
         font-size: 20px;
         padding: 12px 20px;
-        width: 80%;
+        width: 65%;
         margin: auto;
     }
     
@@ -958,10 +958,10 @@ nav a:hover {
         white-space: normal;
         word-wrap: break-word;
     }
-
+ 
     .about-us-container {
         height: 400px;
-        width: 500px;
+        width: 95%;
     }
 
     .about-us-item .about-us-content{
@@ -974,7 +974,7 @@ nav a:hover {
         height: 100px;
         position: absolute;
         top: 50%;
-        transform: translate(0, 10%);
+        transform: translate(0, 30%);
         border-radius: 20px;
         box-shadow: 0 5px 10px #505050;
         background-position: 50% 50%;
@@ -995,20 +995,19 @@ nav a:hover {
     
     
     .about-us-slide .about-us-item:nth-child(3){
-        left: 32%;
+        left: 35%;
     }
     .about-us-slide .about-us-item:nth-child(4){
-        left: calc(32% + 100px);
+        left: calc(35% + 80px);
     }
     .about-us-slide .about-us-item:nth-child(5){
-        left: calc(32% + 200px);
+        left: calc(35% + 160px);
     }
-    
-    /* here n = 0, 1, 2, 3,... */
+
     .about-us-slide .about-us-item:nth-child(n + 6){
-        left: calc(32% + 300px);
+        left: calc(35% + 240px);
         opacity: 0;
-    }
+    }*/
 
     .about-us-content .about-us-name{
         width: 150px;
@@ -1027,14 +1026,16 @@ nav a:hover {
         position: absolute;
         bottom: 5px;
     }
-    
 
     .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         padding: 30px 10px;
     }
     
     .footer-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 30px;
         text-align: center;
     }

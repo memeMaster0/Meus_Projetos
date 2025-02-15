@@ -34,6 +34,10 @@ header {
     color: white;
 }
 
+.top-bar {
+    display: flex;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -44,6 +48,7 @@ header {
 }
 
 .contato {
+    margin-left: 150px;
     display: flex;
     align-items: center;
 }
@@ -396,7 +401,7 @@ nav a:hover {
 
 .products-cta-button img {
     height: 50px;
-    margin-right: 7px;   
+    margin-right: 7px;
 }
 
 .products-cta-button:hover {
@@ -824,7 +829,7 @@ nav a:hover {
 }
 
 /* Mobile.css - Estilos para telas menores */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1280px) {
     html {
         scroll-behavior: smooth;
     }
@@ -841,33 +846,44 @@ nav a:hover {
     }
 
     header {
+        padding: 0;
         flex-direction: column;
-        padding: 20px;
-        text-align: center;
         align-items: center;
+        max-width: 100%;
+        margin-top: 30px;
     }
     
+    .top-bar {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
     .logo img {
-        max-height: 100px;
+        margin-right: 150px;
+        max-height: 150px;
     }
     
+    .contato img {
+        height: 100px;
+    }
+
     .contato {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        margin: 0;
+        flex-direction: row;
     }
     
     .contato-info span, .contato-info small {
-        font-size: 18px;
+        font-size: 22px;
     }
     
     nav {
-        padding-top: 50px;
+        max-width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 40px;
     }
-    
+
     nav a {
         padding: 10px;
         font-size: 16px;
@@ -890,6 +906,15 @@ nav a:hover {
         font-size: 28px;
     }
     
+    .intro-text h1::after {
+        content: "";
+        display: block;
+        width: 500px;
+        height: 4px;
+        background-color: #ffc107;
+        margin: 10px auto 20px auto;
+    }
+
     .cta-button {
         font-size: 20px;
         padding: 10px 20px;
@@ -942,14 +967,13 @@ nav a:hover {
     }
     
     .products-cta-button {
-        font-size: 20px;
-        padding: 12px 20px;
-        width: 65%;
+        font-size: 25px;
+        max-width: 50%;
         margin: auto;
     }
     
     .products-container {
-        gap: 10px;
+        gap: 50px;
     }
     
     .product {

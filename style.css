@@ -831,7 +831,7 @@ nav a:hover {
 
     body {
         width: 100%;
-        display: flex; /* Ativa Flexbox */
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -908,16 +908,21 @@ nav a:hover {
         height: auto;
     }
     
+    .specialties {
+        position: relative;
+        margin-right: auto;
+    }
+
     .specialties-container, .products-container {
         flex-direction: column;
         padding: 10px;
     }
     
-    /* Ajustes para Products */
     .products {
-        padding: 70px 20px 150px 20px;
-        max-width: 100%;
+        padding: 70px 50px 200px 120px;
+        max-width: 90%;
         text-align: center;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 96%);
     }
     
     .products h2 {
@@ -965,7 +970,7 @@ nav a:hover {
     }
  
     .about-us-container {
-        height: 400px;
+        height: 80vh;
         width: 95%;
     }
 

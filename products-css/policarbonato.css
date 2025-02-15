@@ -331,6 +331,7 @@ nav a:hover {
 @media screen and (max-width: 1000px) {
     html {
         scroll-behavior: smooth;
+        touch-action: pan-y;
     }
 
     body {
@@ -431,6 +432,7 @@ nav a:hover {
         flex-direction: column;
         width: 100%;
         padding: 30px 10px;
+       position: static;
     }
     
     .footer-row {

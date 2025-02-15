@@ -832,7 +832,7 @@ nav a:hover {
 }
 
 /* Mobile.css - Estilos para telas menores */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1500px) {
     html {
         scroll-behavior: smooth;
     }
@@ -973,7 +973,7 @@ nav a:hover {
     }
 
     .products {
-        padding: 70px 20px 150px 80px;
+        padding: 80px 20px 200px 80px;
         max-width: 100%;
         text-align: center;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 96%);

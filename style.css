@@ -830,7 +830,7 @@ nav a:hover {
     }
 
     body {
-        width: 500px;
+        width: 100%;
         display: flex; /* Ativa Flexbox */
         flex-direction: column;
         justify-content: center;
@@ -883,6 +883,7 @@ nav a:hover {
         max-width: 100%;
         text-align: center;
     }
+
     
     .intro-text h1 {
         font-size: 28px;
@@ -893,6 +894,10 @@ nav a:hover {
         padding: 10px 20px;
     }
     
+    .benefits-list li {
+        justify-content: center;
+    }
+
     .carousel-container {
         max-width: 100%;
         margin: auto;

@@ -835,6 +835,7 @@ nav a:hover {
 @media screen and (max-width: 1500px) {
     html {
         scroll-behavior: smooth;
+        touch-action: pan-y;
     }
 
     body {

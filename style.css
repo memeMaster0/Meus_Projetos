@@ -832,7 +832,7 @@ nav a:hover {
 }
 
 /* Mobile.css - Estilos para telas menores */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
     html {
         scroll-behavior: smooth;
         touch-action: pan-y;
@@ -1075,7 +1075,7 @@ nav a:hover {
     }
 
     .about-us-slide .about-us-item:nth-child(n + 6){
-        left: calc(35% + 200px);
+        left: calc(35% + 160px);
         opacity: 0;
     }
 

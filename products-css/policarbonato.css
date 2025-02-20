@@ -328,7 +328,8 @@ nav a:hover {
     margin: 0px;
 }
 
-@media screen and (max-width: 1000px) {
+/* Mobile.css - Estilos para telas menores */
+@media screen and (max-width: 1300px) {
     html {
         scroll-behavior: smooth;
         touch-action: pan-y;
@@ -346,36 +347,49 @@ nav a:hover {
     }
 
     header {
+        padding: 0;
         flex-direction: column;
-        padding: 20px;
-        text-align: center;
         align-items: center;
+        max-width: 95%;
+        margin-top: 30px;
     }
     
+    .top-bar {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
     .logo img {
-        max-height: 100px;
+        margin-right: 50px;
+        max-height: 120px;
     }
     
+    .contato img {
+        height: 70px;
+    }
+
     .contato {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
     }
     
     .contato-info span, .contato-info small {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     nav {
-        padding-top: 50px;
+        max-width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-bottom: 40px;
     }
-    
+
     nav a {
-        padding: 10px;
-        font-size: 16px;
+        padding: 5px;
+        font-size: 13px;
     }
 
     .container {
@@ -421,8 +435,18 @@ nav a:hover {
     #slider2:target ~ .imgContainer #button2,
     #slider3:target ~ .imgContainer #img3,
     #slider3:target ~ .imgContainer #button3 {
-        width: 290px;
-        height: 420px;
+        width: 270px;
+        height: 400px;
+    }
+
+    #slider1:target ~ .imgContainer{
+        left: 40%;
+    }
+    #slider2:target ~ .imgContainer{
+        left: 0%;
+    }
+    #slider3:target ~ .imgContainer{
+        left: -30%;
     }
 
 

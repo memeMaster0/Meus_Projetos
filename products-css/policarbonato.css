@@ -331,7 +331,7 @@ nav a:hover {
 /* Mobile.css - Estilos para telas menores */
 @media screen and (max-width: 1300px) {
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
         touch-action: pan-y;
     }
 
@@ -440,13 +440,13 @@ nav a:hover {
     }
 
     #slider1:target ~ .imgContainer{
-        left: 40%;
+        left: 50%;
     }
     #slider2:target ~ .imgContainer{
         left: 0%;
     }
     #slider3:target ~ .imgContainer{
-        left: -30%;
+        left: -50%;
     }
 
 

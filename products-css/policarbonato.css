@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/tt-wellingtons-trl');
 
 html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -34,6 +34,10 @@ header {
     color: white;
 }
 
+.top-bar {
+    display: flex;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -44,6 +48,7 @@ header {
 }
 
 .contato {
+    margin-left: 150px;
     display: flex;
     align-items: center;
 }
@@ -100,130 +105,150 @@ nav a:hover {
     opacity: 1;
 }
 
-.container {
-    padding-top: 50px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: hidden;
-    padding-left: 100px;
-}
 
-.container h1 {
-    font-size: 38px;
-    padding-bottom: 20px;
-}
-
-.container h1::after {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 4px;
-    background-color: #ffc107;
-    margin-top: 5px;
-}
-
-.container p {
-    max-width: 28%;
-    font-size: 20px;
-    color: white;
-    text-align: justify;
-    margin-bottom: 30px;
-}
-
-.container span {
-    color: #ffc107;
-    font-weight: bold;
-}
-
-.imgContainer{
-    margin-top: 120px;
-    width: 100%;
-    height: 600px;
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
-}
-
-.slide_div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 30px 0 30px;
-}
-
-.container img{
+.about-us-container{
+    border-radius: 20px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    height: 370px;
-    width: 240px;
-    filter: saturate(10%);
-    transition: 0.7s;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
+    width: 60%;
+    height: 90vh;
+    background: #f5f5f5;
+    box-shadow: 0 5px 10px #dbdbdb3d;
+    scroll-margin-top: 4vh;
 }
 
-.button{
+.about-us-container .about-us-slide .about-us-item{
+    width: 200px;
+    height: 300px;
     position: absolute;
-    width: 240px;
-    height: 370px;
-    transition: 0.7s;
-    background-color: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    transform: translate(0, 10%);
     border-radius: 20px;
+    box-shadow: 0 5px 10px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
 }
 
-.button:hover{
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.slider {
-    position: fixed;
+.about-us-slide .about-us-item:nth-child(1),
+.about-us-slide .about-us-item:nth-child(2){
     top: 0;
     left: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    visibility: hidden;
-    pointer-events: none;
+    transform: translate(0, 0);
+    border-radius: 20;
+    width: 100%;
+    height: 100%;
 }
 
 
-#slider1:target ~ .imgContainer #img1,
-#slider1:target ~ .imgContainer #button1{
-    width: 390px;
-    height: 600px;
-    background-color: transparent;
-    filter: saturate(100%);
+.about-us-slide .about-us-item:nth-child(3){
+    left: 55%;
+}
+.about-us-slide .about-us-item:nth-child(4){
+    left: calc(55% + 220px);
+}
+.about-us-slide .about-us-item:nth-child(5){
+    left: calc(55% + 440px);
 }
 
-#slider2:target ~ .imgContainer #img2,
-#slider2:target ~ .imgContainer #button2{
-    width: 390px;
-    height: 600px;
-    background-color: transparent;
-    filter: saturate(100%);
+/* here n = 0, 1, 2, 3,... */
+.about-us-slide .about-us-item:nth-child(n + 6){
+    left: calc(55% + 660px);
+    opacity: 0;
 }
 
-#slider3:target ~ .imgContainer #img3,
-#slider3:target ~ .imgContainer #button3{
-    width: 390px;
-    height: 600px;
-    background-color: transparent;
-    filter: saturate(100%);
+.about-us-item .about-us-content{
+    position: absolute;
+    top: 25%;
+    left: 70px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
 }
 
-#slider1:target ~ .imgContainer{
-    left: 15%;
+
+.about-us-slide .about-us-item:nth-child(2) .about-us-content{
+    display: block;
 }
-#slider2:target ~ .imgContainer{
-    left: 0%;
+
+
+.about-us-content .about-us-name{
+    width: 450px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 30px;
+    font-family: 'TT Wellingtons Trl', sans-serif;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    background-color: #ffbf00e1;
 }
-#slider3:target ~ .imgContainer{
-    left: -15%;
+
+.about-us-content .about-us-des{
+    width: 500px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 30px;
+    background-color: rgba(248, 248, 248, 0.938);
+    color: black;
+    font-family: "Questrial", serif;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.about-us-content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.about-us-button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.about-us-button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
 }
 
 .footer-container{
@@ -244,7 +269,6 @@ nav a:hover {
 }
 
 .footer{
-    margin-top: 70vh;
 	background-color: #24262b;
     padding: 50px 0 30px 0;
 }
@@ -328,10 +352,11 @@ nav a:hover {
     margin: 0px;
 }
 
+
 /* Mobile.css - Estilos para telas menores */
 @media screen and (max-width: 1300px) {
     html {
-        scroll-behavior: auto;
+        scroll-behavior: smooth;
         touch-action: pan-y;
     }
 
@@ -384,79 +409,87 @@ nav a:hover {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 18px;
-        margin-bottom: 40px;
     }
 
     nav a {
         padding: 5px;
         font-size: 13px;
     }
-
-    .container {
-        padding-left: 50px;
+ 
+    .about-us-container {
+        height: 60vh;
+        width: 95%;
     }
 
-    .container h1{
-        margin-top: 20px;
-        text-align: left;
+    .about-us-item .about-us-content{
+        top: 30%;
+        left: 20px;
     }
-
-    .container p {
-        max-width: 80%;
-        text-align: left;
-    }
-
-    .imgContainer {
-        margin-top: 250px;
-    }
-
-    .container img{
-        position: relative;
-        height: 300px;
-        width: 200px;
-        filter: saturate(10%);
-        transition: 0.7s;
-        background-color: rgba(0, 0, 0, 0.4);
-        border-radius: 20px;
-    }
-
-    .button{
+    
+    .about-us-container .about-us-slide .about-us-item{
+        width: 70px;
+        height: 100px;
         position: absolute;
-        width: 200px;
-        height: 300px;
-        transition: 0.7s;
-        background-color: rgba(0, 0, 0, 0.4);
+        top: 50%;
+        transform: translate(0, 30%);
         border-radius: 20px;
+        box-shadow: 0 5px 10px #505050;
+        background-position: 70% 70%;
+        background-size: cover;
+        display: inline-block;
+        transition: 0.5s;
+    }
+    
+    .about-us-slide .about-us-item:nth-child(1),
+    .about-us-slide .about-us-item:nth-child(2){
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 20;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .about-us-slide .about-us-item:nth-child(3){
+        left: 35%;
+    }
+    .about-us-slide .about-us-item:nth-child(4){
+        left: calc(35% + 80px);
+    }
+    .about-us-slide .about-us-item:nth-child(5){
+        left: calc(35% + 160px);
     }
 
-    #slider1:target ~ .imgContainer #img1,
-    #slider1:target ~ .imgContainer #button1,
-    #slider2:target ~ .imgContainer #img2,
-    #slider2:target ~ .imgContainer #button2,
-    #slider3:target ~ .imgContainer #img3,
-    #slider3:target ~ .imgContainer #button3 {
+    .about-us-slide .about-us-item:nth-child(n + 6){
+        left: calc(35% + 160px);
+        opacity: 0;
+    }
+
+    .about-us-content .about-us-name{
         width: 270px;
-        height: 400px;
+        font-size: 25px;
+    }
+    
+    .about-us-content .about-us-des{
+        width: 300px;
+        font-size: 11px;
+        margin-top: 10px;
     }
 
-    #slider1:target ~ .imgContainer{
-        left: 50%;
+    .about-us-button{
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
     }
-    #slider2:target ~ .imgContainer{
-        left: 0%;
-    }
-    #slider3:target ~ .imgContainer{
-        left: -50%;
-    }
-
 
     .footer {
-        margin-top: 80vh;
         display: flex;
         flex-direction: column;
         width: 100%;
         padding: 30px 10px;
-       position: static;
     }
     
     .footer-row {
@@ -473,10 +506,12 @@ nav a:hover {
         font-size: 16px;
     }
     
-    .footer-col ul li a {
-        display: flex;
+    .footer-col ul {
         text-align: left;
-        font-size: 14px;
     }
 
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+    
 }
